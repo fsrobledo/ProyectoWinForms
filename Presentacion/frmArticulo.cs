@@ -78,7 +78,7 @@ namespace Presentacion
             {
                 if (articulo == null)
                     articulo = new Articulo();
-                if (validarFiltro())
+                if (validarCampos())
                     return;
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
@@ -117,7 +117,7 @@ namespace Presentacion
             cargarImagen(txtImagenUrl.Text);
         }
 
-        private bool validarFiltro()
+        private bool validarCampos()
         {
             if (txtCodigo.Text == "")
             {
